@@ -1,0 +1,14 @@
+# IDE and editors
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Deployment
+.vercel
+.netlify
