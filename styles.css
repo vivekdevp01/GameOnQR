@@ -19,7 +19,11 @@
   --font-body: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   -webkit-tap-highlight-color: transparent;
@@ -37,7 +41,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: rgba(255, 196, 46, 0.85); color: #1a1206; }
+::selection {
+  background: rgba(255, 196, 46, 0.85);
+  color: #1a1206;
+}
 
 /* ---------------- Ambient background: glows, dot wall, scanlines ---------- */
 
@@ -54,9 +61,21 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(52rem 38rem at 16% 6%, rgba(255, 46, 99, 0.16), transparent 62%),
-    radial-gradient(48rem 36rem at 86% 90%, rgba(42, 216, 232, 0.14), transparent 62%),
-    radial-gradient(34rem 26rem at 50% 40%, rgba(255, 196, 46, 0.11), transparent 66%);
+    radial-gradient(
+      52rem 38rem at 16% 6%,
+      rgba(255, 46, 99, 0.16),
+      transparent 62%
+    ),
+    radial-gradient(
+      48rem 36rem at 86% 90%,
+      rgba(42, 216, 232, 0.14),
+      transparent 62%
+    ),
+    radial-gradient(
+      34rem 26rem at 50% 40%,
+      rgba(255, 196, 46, 0.11),
+      transparent 66%
+    );
 }
 
 .bg-fx::after {
@@ -65,10 +84,24 @@ body {
   inset: 0;
   background-image:
     radial-gradient(rgba(255, 249, 238, 0.05) 1px, transparent 1.4px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.02) 0 1px, transparent 1px 3px);
-  background-size: 26px 26px, auto;
-  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, black 30%, transparent 100%);
-          mask-image: radial-gradient(ellipse 90% 80% at 50% 45%, black 30%, transparent 100%);
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02) 0 1px,
+      transparent 1px 3px
+    );
+  background-size:
+    26px 26px,
+    auto;
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 80% at 50% 45%,
+    black 30%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 90% 80% at 50% 45%,
+    black 30%,
+    transparent 100%
+  );
 }
 
 .spark {
@@ -80,11 +113,41 @@ body {
   opacity: 0.4;
   animation: drift 11s ease-in-out infinite alternate;
 }
-.spark.s1 { top: 18%; left: 12%; background: var(--gold); animation-duration: 9s; }
-.spark.s2 { top: 68%; left: 8%; background: var(--cyan); animation-duration: 13s; animation-delay: -4s; }
-.spark.s3 { top: 24%; right: 10%; background: var(--pink); animation-duration: 12s; animation-delay: -7s; }
-.spark.s4 { top: 78%; right: 16%; background: var(--gold); animation-duration: 10s; animation-delay: -2s; }
-.spark.s5 { top: 46%; right: 4%; background: var(--cyan); animation-duration: 14s; animation-delay: -9s; opacity: 0.28; }
+.spark.s1 {
+  top: 18%;
+  left: 12%;
+  background: var(--gold);
+  animation-duration: 9s;
+}
+.spark.s2 {
+  top: 68%;
+  left: 8%;
+  background: var(--cyan);
+  animation-duration: 13s;
+  animation-delay: -4s;
+}
+.spark.s3 {
+  top: 24%;
+  right: 10%;
+  background: var(--pink);
+  animation-duration: 12s;
+  animation-delay: -7s;
+}
+.spark.s4 {
+  top: 78%;
+  right: 16%;
+  background: var(--gold);
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+.spark.s5 {
+  top: 46%;
+  right: 4%;
+  background: var(--cyan);
+  animation-duration: 14s;
+  animation-delay: -9s;
+  opacity: 0.28;
+}
 
 /* ---------------- Layout ---------------- */
 
@@ -121,8 +184,16 @@ body {
   padding: clamp(24px, 5.5vw, 32px);
   border-radius: 28px;
   background:
-    radial-gradient(120% 120% at 50% 0%, rgba(255, 196, 46, 0.12), transparent 55%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+    radial-gradient(
+      120% 120% at 50% 0%,
+      rgba(255, 196, 46, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
   border: 1px solid rgba(255, 196, 46, 0.28);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.35),
@@ -194,7 +265,9 @@ body {
   color: rgba(255, 249, 238, 0.72);
 }
 
-.headline .kicker span { animation-delay: 0.4s; }
+.headline .kicker span {
+  animation-delay: 0.4s;
+}
 
 .headline .main {
   font-size: clamp(28px, 8vw, 54px);
@@ -202,9 +275,14 @@ body {
 
 .headline .main span {
   animation-delay: 0.55s;
-  background: linear-gradient(180deg, var(--gold-soft) 4%, var(--gold) 52%, var(--gold-deep) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--gold-soft) 4%,
+    var(--gold) 52%,
+    var(--gold-deep) 100%
+  );
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
@@ -238,8 +316,15 @@ body {
   flex: none;
 }
 
-.status-pill.is-live { border-color: rgba(0, 229, 153, 0.45); background: rgba(0, 229, 153, 0.09); color: #7dffd2; }
-.status-pill.is-live .pulse-dot { background: var(--green); box-shadow: 0 0 0 0 rgba(0, 229, 153, 0.55); }
+.status-pill.is-live {
+  border-color: rgba(0, 229, 153, 0.45);
+  background: rgba(0, 229, 153, 0.09);
+  color: #7dffd2;
+}
+.status-pill.is-live .pulse-dot {
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(0, 229, 153, 0.55);
+}
 
 .status-message {
   max-width: 42ch;
@@ -279,8 +364,12 @@ body {
     opacity 0.3s ease;
 }
 
-.store-card[data-platform="android"] { animation-delay: 1s; }
-.store-card[data-platform="ios"] { animation-delay: 1.14s; }
+.store-card[data-platform="android"] {
+  animation-delay: 1s;
+}
+.store-card[data-platform="ios"] {
+  animation-delay: 1.14s;
+}
 
 .store-icon {
   flex: none;
@@ -293,9 +382,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.store-icon svg { width: 23px; height: 23px; display: block; }
+.store-icon svg {
+  width: 23px;
+  height: 23px;
+  display: block;
+}
 
-.store-text { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-align: left; }
+.store-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  text-align: left;
+}
 
 .store-hint {
   font-size: 10px;
@@ -305,7 +404,11 @@ body {
   color: rgba(255, 249, 238, 0.55);
 }
 
-.store-name { font-size: 18.5px; font-weight: 700; letter-spacing: 0.01em; }
+.store-name {
+  font-size: 18.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
 
 .store-chip {
   margin-left: auto;
@@ -327,17 +430,55 @@ body {
   border-color: rgba(0, 229, 153, 0.4);
   background: rgba(0, 229, 153, 0.08);
 }
+/* NEW - "coming soon" chip gets its own quiet identity (small pulsing
+   dot, gold-tinted) instead of just inheriting the default gray chip
+   look - makes it read as "actively planned" rather than "inactive". */
+.store-card.is-soon .store-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 224, 130, 0.75);
+  border-color: rgba(255, 196, 46, 0.22);
+  background: rgba(255, 196, 46, 0.06);
+}
+
+.store-card.is-soon .store-chip::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex: none;
+  animation: soon-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes soon-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 /* Live state: lift, glow, shine sweep (glow lives inside the rounded box,
    so the "recommended" tag outside the card is never clipped) */
-.store-card.is-live:not(.is-soon) { cursor: pointer; }
+.store-card.is-live:not(.is-soon) {
+  cursor: pointer;
+}
 
 .store-card.is-live::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(100deg, transparent 25%, rgba(255, 255, 255, 0.13) 50%, transparent 75%);
+  background: linear-gradient(
+    100deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.13) 50%,
+    transparent 75%
+  );
   background-size: 250% 100%;
   background-position: 130% 0;
   transition: background-position 0.65s ease;
@@ -350,15 +491,45 @@ body {
   box-shadow: 0 18px 42px -12px rgba(255, 196, 46, 0.35);
 }
 
-.store-card.is-live:hover::after { background-position: -60% 0; }
+.store-card.is-live:hover::after {
+  background-position: -60% 0;
+}
 
-.store-card.is-live:active { transform: translateY(-1px) scale(0.99); }
+.store-card.is-live:active {
+  transform: translateY(-1px) scale(0.99);
+}
 
 /* Coming soon: honest, dimmed, non-interactive */
-.store-card.is-soon {
+/* .store-card.is-soon {
   opacity: 0.5;
   filter: saturate(0.55);
   cursor: default;
+} */
+/* Coming soon: honest and clearly non-interactive, but still looks
+   like a deliberate design choice rather than a broken/disabled
+   element. Dashed border + subtle icon dim (not a blanket
+   opacity/desaturate on the whole card) keeps text fully readable. */
+.store-card.is-soon {
+  background: linear-gradient(160deg, #14101f 0%, #0a0812 100%);
+  border: 1.5px dashed rgba(255, 249, 238, 0.16);
+  cursor: default;
+}
+
+.store-card.is-soon .store-icon {
+  opacity: 0.45;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.store-card.is-soon .store-name {
+  color: rgba(255, 249, 238, 0.55);
+}
+
+.store-card.is-soon .store-hint {
+  color: rgba(255, 249, 238, 0.32);
+}
+
+.store-card.is-soon:hover {
+  border-color: rgba(255, 196, 46, 0.22);
 }
 
 /* Recommended on the customer's own device */
@@ -387,7 +558,9 @@ body {
   z-index: 2;
 }
 
-.store-card.recommended .rec-tag { display: block; }
+.store-card.recommended .rec-tag {
+  display: block;
+}
 
 /* ---------------- Footnote + footer --------------------------------------- */
 
@@ -399,7 +572,10 @@ body {
 }
 
 .footnote::before,
-.footnote::after { content: "\00a0\00a0——\00a0\00a0"; opacity: 0.5; }
+.footnote::after {
+  content: "\00a0\00a0——\00a0\00a0";
+  opacity: 0.5;
+}
 
 .site-footer {
   font-size: 10.5px;
@@ -414,75 +590,156 @@ body {
 /* ---------------- Desktop breathing room ---------------------------------- */
 
 @media (min-width: 700px) {
-  .stage { gap: 15px; }
-  .logo { width: min(280px, 35vw); }
-  .marquee-frame { padding: 31px 46px; border-radius: 32px; }
-  .store-cards { margin-top: 6px; gap: 14px; }
-  .store-card { padding: 15px 18px; gap: 15px; }
-  .store-icon { width: 44px; height: 44px; }
-  .store-icon svg { width: 24px; height: 24px; }
-  .store-name { font-size: 19px; }
-  .status-message { max-width: 52ch; }
+  .stage {
+    gap: 15px;
+  }
+  .logo {
+    width: min(280px, 35vw);
+  }
+  .marquee-frame {
+    padding: 31px 46px;
+    border-radius: 32px;
+  }
+  .store-cards {
+    margin-top: 6px;
+    gap: 14px;
+  }
+  .store-card {
+    padding: 15px 18px;
+    gap: 15px;
+  }
+  .store-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .store-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .store-name {
+    font-size: 19px;
+  }
+  .status-message {
+    max-width: 52ch;
+  }
 }
 
 @media (max-width: 430px) {
-  .footnote::before, .footnote::after { content: none; }
-  .store-hint { font-size: 9.5px; letter-spacing: 0.15em; white-space: nowrap; }
-  .store-chip { padding: 5px 9px; letter-spacing: 0.12em; }
+  .footnote::before,
+  .footnote::after {
+    content: none;
+  }
+  .store-hint {
+    font-size: 9.5px;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
+  .store-chip {
+    padding: 5px 9px;
+    letter-spacing: 0.12em;
+  }
 }
 
 /* ---------------- Keyframes ----------------------------------------------- */
 
 @keyframes rise {
-  to { transform: translateY(0); }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pop {
-  from { opacity: 0; transform: scale(0.86); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes card-up {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Marquee chase: dots travel around the frame (gold and cyan alternate) */
 @keyframes chaseA {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -8.3333; }
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -8.3333;
+  }
 }
 
 @keyframes chaseB {
-  from { stroke-dashoffset: -4.1667; }
-  to { stroke-dashoffset: -12.5; }
+  from {
+    stroke-dashoffset: -4.1667;
+  }
+  to {
+    stroke-dashoffset: -12.5;
+  }
 }
 
 @keyframes ping {
-  0% { box-shadow: 0 0 0 0 rgba(255, 196, 46, 0.55); }
-  70% { box-shadow: 0 0 0 9px rgba(255, 196, 46, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 196, 46, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 196, 46, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(255, 196, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 196, 46, 0);
+  }
 }
 
 @keyframes drift {
-  from { transform: translate(0, 0) scale(1); opacity: 0.38; }
-  to { transform: translate(26px, -34px) scale(1.5); opacity: 0.12; }
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.38;
+  }
+  to {
+    transform: translate(26px, -34px) scale(1.5);
+    opacity: 0.12;
+  }
 }
 
 /* ---------------- Reduced motion: everything still readable ---------------- */
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .headline .line span { transform: none; }
-  .spark { display: none; }
-  .bulbs { filter: none; }
+  .headline .line span {
+    transform: none;
+  }
+  .spark {
+    display: none;
+  }
+  .bulbs {
+    filter: none;
+  }
 }
